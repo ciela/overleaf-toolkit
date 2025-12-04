@@ -1,0 +1,5 @@
+---
+version: '2.2'
+services:
+    sharelatex:
+        image: ciela/sharelatex:0.0.1
