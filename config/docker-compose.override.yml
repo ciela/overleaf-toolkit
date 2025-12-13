@@ -5,3 +5,4 @@ services:
         image: ciela/sharelatex:0.0.3
         volumes:
             - "${MANUSCRIPT_PATH}:/manuscript"
+        working_dir: /manuscript
