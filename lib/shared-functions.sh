@@ -2,6 +2,20 @@
 # shellcheck disable=SC2034
 # shellcheck source-path=..
 
+# activate GNU sed command alias in darwin
+if [[ "$(uname)" == "Darwin" ]]; then
+    if ! command -v gsed &> /dev/null; then
+        echo "---------------------  ERROR  -----------------------"
+        echo "This script require gsed command instead of macOS default sed."
+        echo "Please install gsed via 'brew install gnu-sed'."
+        echo "---------------------  ERROR  -----------------------"
+        exit 1
+    else
+        shopt -s expand_aliases
+        alias sed='gsed'
+    fi
+fi
+
 function read_config() {
   source "$TOOLKIT_ROOT/lib/default.rc"
   # shellcheck source=/dev/null
