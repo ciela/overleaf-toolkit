@@ -3,3 +3,6 @@ version: '2.2'
 services:
     sharelatex:
         image: ciela/sharelatex:0.0.3
+        volumes:
+            - "${MANUSCRIPT_PATH}:/manuscript"
+        working_dir: /manuscript

@@ -106,6 +106,7 @@ function set_base_vars() {
   export OVERLEAF_DATA_PATH
   export OVERLEAF_PORT
   export OVERLEAF_IN_CONTAINER_DATA_PATH
+  export MANUSCRIPT_PATH
 
 }
 
